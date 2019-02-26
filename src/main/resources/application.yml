@@ -1,12 +1,12 @@
 spring:
   application:
-    name: hello-spring-cloud-config
+    name: itoken-config
   cloud:
     config:
       label: master
       server:
         git:
-          uri: https://github.com/betterMoreMOre/spring-cloud-config
+          uri: https://github.com/betterMoreMOre/spring-cloud-itoken-config
           search-paths: respo
           username: 493886277@qq.com
           password: sdqhyk123
@@ -23,3 +23,12 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info

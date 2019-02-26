@@ -5,15 +5,15 @@
 
     <parent>
         <groupId>com.funtl</groupId>
-        <artifactId>hello-spring-cloud-dependencies</artifactId>
+        <artifactId>itoken-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../hello-spring-cloud-dependencies/pom.xml</relativePath>
+        <relativePath>../itoken-dependencies/pom.xml</relativePath>
     </parent>
 
-    <artifactId>hello-spring-cloud-config</artifactId>
+    <artifactId>itoken-config</artifactId>
     <packaging>jar</packaging>
 
-    <name>hello-spring-cloud-config</name>
+    <name>itoken-config</name>
     <url>http://www.funtl.com</url>
     <inceptionYear>2018-Now</inceptionYear>
 
@@ -41,6 +41,10 @@
         <!-- Spring Cloud Begin -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
         <dependency>
@@ -48,11 +52,8 @@
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
         <!-- Spring Cloud End -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
 
+        <!-- Spring Boot Admin Begin -->
         <dependency>
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-core</artifactId>
@@ -61,6 +62,7 @@
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
         </dependency>
+        <!-- Spring Boot Admin End -->
     </dependencies>
 
     <build>
@@ -69,7 +71,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.funtl.hello.spring.cloud.config.ConfigApplication</mainClass>
+                    <mainClass>com.funtl.itoken.config.ConfigApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
