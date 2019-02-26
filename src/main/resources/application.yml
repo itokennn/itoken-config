@@ -6,7 +6,7 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/betterMoreMOre/spring-cloud-itoken-config
+          uri: https://github.com/itokennn/itoken-config
           search-paths: respo
           username: 493886277@qq.com
           password: sdqhyk123
